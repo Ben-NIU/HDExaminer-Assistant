@@ -3,7 +3,7 @@ library(DT)
 
 shinyUI(fluidPage(
   titlePanel(
-  fluidRow(column(8, p(strong("HDExaminer Assistant:",em("H/DX Plotting System",style="font-family: 'times'; color:purple; font-size:15pt")),style="font-family: 'times'"),
+  fluidRow(column(8, p(strong("HDExaminer Assistant:",em("H/DX Easy Plotting",style="font-family: 'times'; color:purple; font-size:15pt")),style="font-family: 'times'"),
                   h4(em(strong("from", span("Gross Lab - Ben NIU", style="color:blue"))))),
            column(4, img(src="washu.png", width=70, height=70, align="right") )
   )),
