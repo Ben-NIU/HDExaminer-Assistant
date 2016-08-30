@@ -15,7 +15,7 @@ shinyServer(function(input, output) {
     read.csv(input$fileinput[['datapath']], skip=1) })
   output$bdppt<-renderUI({
     all.ppt<-unique(paste(origin()$Start,"-",origin()$End,",   +",origin()$Charge,sep=""))
-    selectInput("bdppt",label="Select peptide(s) you'd like to discard", choices = all.ppt, multiple = TRUE)
+    selectInput("bdppt",label=div(h4("Select peptide(s) you'd like to discard"),style="font-family:'marker felt';color:purple"), choices = all.ppt, multiple = TRUE)
   })
   dataIn<-eventReactive(input$act,{HDXdata.combo(origin(),bad.peptides=input$bdppt,time.points = input$timepoints, rep=input$replicates)})
   dataF<-reactive({HDXpepmap.combo(dataIn(), time.points = input$timepoints)})
