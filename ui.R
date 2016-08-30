@@ -3,9 +3,9 @@ library(DT)
 
 shinyUI(fluidPage(
   titlePanel(
-  fluidRow(column(8, p(strong("HDExaminer Assistant:",em("H/DX Easy Plotting",style="font-family: 'times'; color:purple; font-size:15pt")),style="font-family: 'times'"),
-                  h4(em(strong("from", span("Gross Lab - Ben NIU", style="color:blue"))))),
-           column(4, img(src="washu.png", width=70, height=70, align="right") )
+  fluidRow(column(8, p(strong("HDExaminer Assistant:",strong(em("H/DX Easy Plotting",style="font-family: 'kokonor'; color:purple; font-size:15pt"))),style="font-family: 'times'"),
+                  h4(em(strong("from", span("Gross Lab - Ben NIU", style="font-family:'gabriola';color:blue; font-size:15pt"))))),
+           column(4, img(src="wustl_name.png", width=210, height=70, align="right") )
   )),
 
   sidebarLayout(
@@ -14,7 +14,7 @@ shinyUI(fluidPage(
       textInput("timepoints", label=h4("Incubation time-point"), placeholder ='You can select from here...'),
       radioButtons("replicates", label=h4("How many replicates?"), choices=list(2,3), selected=3),
       div(em(h5("Click to generate peptide table:")),style="color:grey"),
-      actionButton("act",label="Show Peptides Table"),
+      actionButton("act",label=div("Show Peptides Table", style="font-family:'impact';color:#3399FF")),
       uiOutput("bdppt"),
       hr(),
       textInput("selplot", label=h4("Which peptide(s) to plot?"), placeholder="E.g., enter 3-9...or 4,5,12..."),
