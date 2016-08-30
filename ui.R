@@ -14,7 +14,7 @@ shinyUI(fluidPage(
       textInput("timepoints", label=h4("Incubation time-point"), placeholder ='You can select from here...'),
       radioButtons("replicates", label=h4("How many replicates?"), choices=list(2,3), selected=3),
       div(em(h5("Click to generate peptide table:")),style="color:grey"),
-      actionButton("act",label=div("Show Peptides Table", style="font-family:'impact';color:#3399FF")),
+      actionButton("act",label=div("Show Peptides Table", style="font-family:'marker felt';color:#3399FF")),
       uiOutput("bdppt"),
       hr(),
       textInput("selplot", label=h4("Which peptide(s) to plot?"), placeholder="E.g., enter 3-9...or 4,5,12..."),
