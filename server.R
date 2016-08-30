@@ -10,7 +10,7 @@ source("Format.R")
 shinyServer(function(input, output) {
   origin<-reactive({
     validate(
-      need(input$fileinput$datapath != "", "Please upload your data file!")
+      need(input$fileinput$datapath != "", "")
   )
     read.csv(input$fileinput[['datapath']], skip=1) })
   output$bdppt<-renderUI({

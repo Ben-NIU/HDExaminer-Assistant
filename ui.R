@@ -19,8 +19,8 @@ shinyUI(fluidPage(
       uiOutput("bdppt"),
       hr(),
       textInput("selplot", label=div(h4("Which peptide(s) to plot ?"),style="font-family:'marker felt';color:purple"), placeholder="E.g., enter 3-9...or 4,5,12..."),
-      sliderInput("nrow", label=em(h5("Layout row #:")), min=1, max=20, value=3,step=1),
-      sliderInput("ncol", label=em(h5("Layout column #:")), min=1, max=20, value=3, step=1)
+      sliderInput("nrow", label=div(em(h5("Layout row #:")),style="font-family:'marker felt'"), min=1, max=20, value=3,step=1),
+      sliderInput("ncol", label=div(em(h5("Layout column #:")), style="font-family:'marker felt'"), min=1, max=20, value=3, step=1)
     ),
     mainPanel(
       tabsetPanel(type="tabs",
