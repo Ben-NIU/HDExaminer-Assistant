@@ -53,10 +53,10 @@ HDXdata.combo<-function(origin, bad.peptides,time.points,rep=3 ){
   
    ## The final cleaned data set is here:
  grouped<-group_by(clean.data, State, Start, End, Sequence, Charge, as.numeric(Time))
-  mn<-summarize(grouped, round(mean(D.percent,na.rm=T),2))
-  sd<-summarize(grouped, sd(D.percent, na.rm=T))
+  mn<-summarize(grouped, round(mean(D.percent,na.rm=TRUE),2))
+  sd<-summarize(grouped, sd(D.percent, na.rm=TRUE))
   names(mn)<-c("State","Start","End","Sequence","Charge","Time","D.percent")
-  mn$sd<-round(sd$`sd(D.percent, na.rm = T)`,2)
+  mn$sd<-round(sd$`sd(D.percent, na.rm = TRUE)`,2)
   final<-as.data.frame(mn)
   final$Start<-final$Start+0
   final$End<-final$End+0
