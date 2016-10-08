@@ -3,14 +3,14 @@ library(DT)
 
 shinyUI(fluidPage(
   titlePanel(
-  fluidRow(column(8, p(strong("HDExaminer Assistant:",strong(em("H/DX Easy Plotting",style="font-family: 'kokonor'; color:purple; font-size:15pt"))),style="font-family: 'times'"),
+  fluidRow(column(8, p(strong("HDExaminer Assistant:",strong(em("H/DX Easy Plotting",style="font-family: 'britannic bold'; color:purple; font-size:15pt"))),style="font-family: 'britannic bold'"),
                   h4(em(strong("from", span("Gross Lab - Ben NIU", style="font-family:'gabriola';color:blue; font-size:15pt"))))),
            column(4, img(src="wustl_name.png", width=210, height=70, align="right") )
   )),
 
   sidebarLayout(
     sidebarPanel(
-      fileInput("fileinput", label=div(h4(em("Input file here")),style="font-family:'chalkduster';color:purple"), multiple = FALSE),
+      fileInput("fileinput", label=div(h4(em("Input file here")),style="font-family:'marker felt';color:purple"), multiple = FALSE),
       textInput("timepoints", label=div(h4("Incubation time-point"), style="font-family:'marker felt';color:purple"), placeholder ='You can select from here...'),
       radioButtons("replicates", label=div(h4("How many replicates ?"),style="font-family:'marker felt';color:purple"), choices=list(2,3), selected=3),
       div(em(h5("Click to generate peptide table:")),style="font-family:'bradley hand';color:grey"),
@@ -19,8 +19,8 @@ shinyUI(fluidPage(
       uiOutput("bdppt"),
       hr(),
       textInput("selplot", label=div(h4("Which peptide(s) to plot ?"),style="font-family:'marker felt';color:purple"), placeholder="E.g., enter 3-9...or 4,5,12..."),
-      sliderInput("nrow", label=div(em(h5("Layout row #:")),style="font-family:'marker felt'"), min=1, max=20, value=3,step=1),
-      sliderInput("ncol", label=div(em(h5("Layout column #:")), style="font-family:'marker felt'"), min=1, max=20, value=3, step=1)
+      sliderInput("nrow", label=div(em(h5("Layout row #:")),style="font-family:'britannic bold'"), min=1, max=20, value=3,step=1),
+      sliderInput("ncol", label=div(em(h5("Layout column #:")), style="font-family:'britannic bold'"), min=1, max=20, value=3, step=1)
     ),
     mainPanel(
       tabsetPanel(type="tabs",
