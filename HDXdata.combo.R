@@ -20,7 +20,7 @@ HDXdata.combo<-function(origin, bad.peptides,time.points,rep=3 ){
         E<-c(E,E0)}}}
   names(origin2)<-c("State","Start","End","Sequence","Charge",E)
   ## 
-  trunc.1<-select(origin2, 1:5)
+  trunc.1<-subset(origin2, select=c(1:5))
   cond<-names(origin2)[-(1:5)]
   trunc.1<-do.call("rbind",replicate(num, trunc.1, simplify=F)) ## trunc.1 repeated "num" times.
   ab<-NULL
