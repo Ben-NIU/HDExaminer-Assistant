@@ -1,6 +1,5 @@
 library(shiny)
 library(ggplot2)
-library(plotly)
 source("HDXdata.combo.R")
 source("HDXpepmap.combo.R")
 source("subdata.R")
