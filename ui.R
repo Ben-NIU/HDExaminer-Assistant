@@ -1,4 +1,5 @@
 library(shiny)
+library(colourpicker)
 library(DT)
 
 shinyUI(fluidPage(
@@ -31,8 +32,8 @@ shinyUI(fluidPage(
          fluidRow(
            column(2,numericInput("transparent",label="Transparency",value=0.8, step = 0.1, max=1, min=0,width = "95%")),
            column(3,numericInput("ptsize", label="Point Size", value=3, step=1, max=8, min=0,width="95%")),
-           column(3,selectInput("apo.col", label="Apo color",choices=list("orange"="#E69F00","light blue"="#56B4E9","green"="#009E73","dark blue"="#0072B2","dark pink"="#CC79A7"), selected="#CC79A7")),
-           column(3,selectInput("holo.col", label="Holo color",choices=list("orange"="#E69F00","light blue"="#56B4E9","green"="#009E73","dark blue"="#0072B2","dark pink"="#CC79A7"), selected="#0072B2"))),
+           column(3,colourInput("apo.col", label="Apo color",value="red",showColour = "both", palette = "square")),
+           column(3,colourInput("holo.col", label="Holo color",value="blue",showColour = "both", palette = "square"))),
            hr(),
          plotOutput("hdxcurves")
                  ),
