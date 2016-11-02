@@ -4,8 +4,12 @@ source("HDXdata.combo.R")
 plot.data<-HDXdata.combo(origin, bad.peptides, time.points,rep)
 pep.map<-HDXpepmap.combo(plot.data, time.points)
 
+if(which=="All"){
+	which2<-1:nrow(pep.map)
+	} else {
+		which2<-which}
 sub<-NULL
-for(t in which){
+for(t in which2){
   sub0<-subset(plot.data, Sequence==as.character(pep.map$Sequence[t]) & Charge==pep.map$Charge[t])
   sub0$peptide<-paste(pep.map$Start[t],"-",pep.map$End[t],"   ","(+",pep.map$Charge[t],")",sep="")
   sub<-rbind(sub,sub0)}

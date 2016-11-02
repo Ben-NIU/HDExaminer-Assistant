@@ -22,6 +22,7 @@ shinyServer(function(input, output) {
  TM<-reactive({(gsub(" ","",input$timepoints) %>% strsplit(",", fixed=TRUE))[[1]] })
  output$fulldt<-downloadHandler(filename=function(){paste("formatted_",input$fileinput$name,sep="")},
                                 content=function(file){write.csv(Format(dataIn(),length(TM())), file)})
+ WH<-reactive({WHICH(input$selplot)})
  
  sub<-reactive({
    validate(
@@ -30,7 +31,7 @@ shinyServer(function(input, output) {
    subdata(origin(), input$bdppt, input$replicates, WH(),input$timepoints)})
 sub1<-sub
 viewDT<-eventReactive(input$vw,{sub1()})
-WH<-reactive({WHICH(input$selplot)})
+
 output$tbvw<-DT::renderDataTable({
   return(viewDT())}, options=list(lengthMenu=list(c(10,25,50,-1),c("10","25","50","ALL")), pageLength=10))
   ## end of prep.
