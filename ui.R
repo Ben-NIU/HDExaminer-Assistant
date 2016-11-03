@@ -40,7 +40,7 @@ shinyUI(fluidPage(
         tabPanel(div("View Data",style="font-family:'comic sans ms';color:#006600"),
                  br(),
                  p('Click the', span('"View"', style="color:orange"), 'button to view the data table selected for kinetic curves. You can make use of the "Search Box" to filter the data table.'),
-                 actionButton("vw", label=div("View it!", style="color:orange"), width = "20%"),
+                 actionButton("vw", label=span("View it!", style="color:orange"), icon = icon("list-ol",lib = "font-awesome")),
                  br(),
                  br(),
                  DT::dataTableOutput("tbvw")
