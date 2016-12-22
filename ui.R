@@ -34,8 +34,16 @@ shinyUI(fluidPage(
            column(2,numericInput("ptsize", label="Point Size", value=3, step=1, max=8, min=0,width="95%")),
            column(2,colourInput("apo.col", label="Apo color",value="red",showColour = "both", palette = "square")),
            column(2,colourInput("holo.col", label="Holo color",value="blue",showColour = "both", palette = "square"))),
-         fluidRow(
+     hr(),
+        fluidRow(
+          column(3, textInput("S1", label="State1 Label", value="Apo")),
+          column(3, textInput("S2", label="State2 Label", value="Holo"))
+        ),
+     hr(),
+          fluidRow(
+          column(4, actionButton("refresh", label="Refresh", icon = icon("refresh"))),
            column(4, downloadButton("spec.output", label="Output Kinetic Curves"))
+         
            ),
            hr(),
          plotOutput("hdxcurves")
