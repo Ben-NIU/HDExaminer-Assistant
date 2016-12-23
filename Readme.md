@@ -26,3 +26,7 @@ A web application aiming to "make life easier" for people who struggle to extrac
 
 ### Download reformatted data table  
 If you strongly prefer to plot kinetic curves on your own, you have the option to download the reformatted data table, which groups each peptide in between two states and have the mean and standard deviation of deuterium uptake percentage calculated.   
+
+
+## LICENSE  
+### MIT
