@@ -1,6 +1,6 @@
 
 ## HDExaminer Assistant: *H/DX Easy Plotting*  
-A web application aiming to "make life easier" for people who struggle to exact data (and plot kinetic curves) from the **ginormous data table** output by HDExaminer. Wondering what the HDExmainer output looks like? See below:  
+A web application aiming to "make life easier" for people who struggle to extract data (and plot kinetic curves) from the **ginormous data table** output by HDExaminer. Wondering what the HDExmainer output looks like? See below:  
 
 
 ![Alt text](pics/huge_mass.png?raw=true "Optional Title")
