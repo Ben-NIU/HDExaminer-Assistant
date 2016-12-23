@@ -19,7 +19,8 @@ A web application aiming to "make life easier" for people who struggle to extrac
 * Curve transparency  
 * Colors for two-state comparison  
 * Labels for two-state comparison  
-Shown below is the kinetic curves you would obtain:  
+
+***Shown below is the kinetic curves you would obtain:***  
 
 ![Alt text](pics/curve.png?raw=true "Optional Title")
 
