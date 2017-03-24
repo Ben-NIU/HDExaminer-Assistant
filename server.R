@@ -6,6 +6,7 @@ source("subdata.R")
 source("WHICH.R")
 source("Format.R")
 source("hdx.curve.R")
+source("Byonic.HDX.format.R")
 
 shinyServer(function(input, output) {
   origin<-reactive({
@@ -57,6 +58,10 @@ output$spec.output<-downloadHandler(filename = function(){paste("HDX-",Sys.Date(
     ggsave(file, plot = isolate(hdx.curve(sub(), input$ptsize, input$transparent, input$S1, input$S2, input$apo.col, input$holo.col, input$nrow, input$ncol)
     ), device = "png", height = 2*input$nrow, width = 2.2*input$ncol,dpi = 400) }, contentType = "image/png")  
   
+cvtd<-reactive({Byonic.HDX.format(input$from.byonic[['datapath']])})
+output$output.byonic<-downloadHandler(filename= function(){paste("HDX-Byonic-", Sys.Date(),".csv", sep="")}, content = function(file){
+  write.csv(cvtd(), file, row.names = FALSE)}
+  )
   
 })
   

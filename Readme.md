@@ -1,6 +1,6 @@
 
 ## HDExaminer Assistant: *H/DX Easy Plotting*  
-A web application aiming to "make life easier" for people who struggle to exact data (and plot kinetic curves) from the **ginormous data table** output by HDExaminer. Wondering what the HDExmainer output looks like? See below:  
+A web application aiming to "make life easier" for people who struggle to extract data (and plot kinetic curves) from the **ginormous data table** output by HDExaminer. Wondering what the HDExmainer output looks like? See below:  
 
 
 ![Alt text](pics/huge_mass.png?raw=true "Optional Title")
@@ -19,12 +19,18 @@ A web application aiming to "make life easier" for people who struggle to exact 
 * Curve transparency  
 * Colors for two-state comparison  
 * Labels for two-state comparison  
-Shown below is the kinetic curves you would obtain:  
+
+***Shown below is the kinetic curves you would obtain:***  
 
 ![Alt text](pics/curve.png?raw=true "Optional Title")
 
 ### Download reformatted data table  
+<<<<<<< HEAD
 If you strongly prefer to plot kinetic curves on your own, you have the option to download the reformatted data table, which groups each peptide in between two states and have the mean and standard deviation of deuterium uptake percentage calculated.  
+=======
+If you strongly prefer to plot kinetic curves on your own, you have the option to download the reformatted data table, which groups each peptide in between two states and have the mean and standard deviation of deuterium uptake percentage calculated.   
+
+>>>>>>> origin/master
 
 ## LICENSE  
 ### MIT

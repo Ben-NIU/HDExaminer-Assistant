@@ -62,7 +62,14 @@ shinyUI(fluidPage(
                  p('Click the "Download" button below to download the whole dataset.'),
                  hr(),
                  downloadButton("fulldt", label="Download")
-                 )
+                 ),
+        tabPanel(div("Byonic Convert", style="font-family:'comic sans ms';color:#006600"),
+                  br(),
+                  fileInput("from.byonic", label =div(h4(em("from Byonic search")),style="font-family:'marker felt';color:purple"), multiple = FALSE),
+                  hr(),
+                  downloadButton("output.byonic", label=span(em("ouput converted"), style="color:red"))
+        
+                  )
             )
     )
   )
